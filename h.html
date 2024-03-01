@@ -1,50 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help Page</title>
-    <style>
-	body{
-		display: grid;
-		grid-template-rows: 4% 6% 86% 4%;
-		margin: 0px;
-}
-
-	.foot{
-		background-color:#0a0369;
-		color:white;
-		margin: 0px;
-		padding: 0px;
-		border: 0px;
-}
-
-	.head{
-		background-color:yellow;
-		margin:0px;
-		place-items: center;
-}
-    </style>
+    <link rel="stylesheet" href="ashstyle.css">
+ 
 </head>
 <body>
 <div class=head>
     <center><h1>Help Page</h1></center>
 </div>
 <div>
-
 <center><h2>Video Tutorial</h2></center>
 </div>
 <div>
+<div class="wrapper">
+  <div id="leftsidebar">
+      <ul id="menulist">
+      <li class="menuitem"><a href='create.html'>Go Back</a></li>
+      <li class="menuitem"><a href='create.html'>Your Dashboard</a></li>
+    </ul>
+       <button id=btn1 onclick="getLocation()">Get Your Location</button>
+  </div>
+
 <center>
-<video width="920" height="480" controls>
+<video width="920" height="480" controls class=main>
 	<source src="./help.mp4" type="video/mp4">
 	<track kind="subtitles" src="./English.vtt" srclang="en" label="English" default>
 </video></center>
 </div>
 
 <div class=foot>
-    <center><p>&copy; 2024 ADDS. All rights reserved.</p></center>
+    <center>
+    <p id="demo"></p>
+    <p>&copy; 2024 ADDS. All rights reserved.</p></center>
 </div>
-
+    <script src=script.js></script>
 </body>
 </html>
